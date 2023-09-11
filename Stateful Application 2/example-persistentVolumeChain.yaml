@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: myclaim
+  name: example-claim
 spec:
   accessModes:
     - ReadWriteMany
   resources:
     requests:
-      storage: 8Gi
+      storage: 8Gi # This means we are requesting for 8 GB of storage

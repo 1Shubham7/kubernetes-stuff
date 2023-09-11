@@ -1,13 +1,15 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: web
+  name: gfg-example-statefulset
+  annotations:
+    description: "This is an example statefulset"
 spec:
   selector:
     matchLabels:
       app: nginx
   serviceName: "nginx"
-  replicas: 3
+  replicas: 3 # remember this, we will have 3 identical pods running
   template:
     metadata:
       labels:
